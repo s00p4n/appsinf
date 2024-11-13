@@ -1,0 +1,126 @@
+/*Global rules*/
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+/*small*/
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+ 
+/*Medium*/
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+/* Large*/
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+body{
+    font-family: "Work sans", sans-serif;
+    width: 100%;
+    height: 100vh;
+    
+    
+}
+.container{
+    padding-left: auto;
+    padding-right: auto;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+.logo{
+    display:flex;
+    align-items: center;
+}
+.logo i{
+    color :#333333;
+    font-size: 28px;
+    margin-right: 3px;
+}
+.logo span{
+    color :#333333;
+    font-size: 1.1rem;
+    font-weight: 600;
+    
+}
+.search{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    border-radius: 28px;
+    background: #f6f6f6;
+    transition: box-shadow 0.25s;
+}
+.search:focus-within{
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+.search-input{
+    font-size: 16px;
+    font-family: 'lexend', sans-serif;
+    color: #333333;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background:transparent;
+}
+.search-input::placeholder, search-icon {
+    color: rgba(0,0,0,0.5);
+}
+header{
+    background-color: #f3e8d2;
+}
+nav{
+    width: 100%;
+    height: 100px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+.center{
+    height: calc(100vh - 64px);
+    background: #7f2717
+}
+.containersec{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+}
+.btn{
+    width: 200px;
+    display: block;
+    
+    font-weight: 500;
+    color:#333;
+    padding: 5px 10px;
+    background: #ffd17b;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 6px #efa424;
+    text-decoration: none;
+}
+.bottom{
+    height: 30vh;
+    background-color: #d4d0c2;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New incident</title>
+    <link rel="stylesheet" href="css/styleincident.css">
+    <!--normalization helps to make the content standard for all servers-->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!--link to google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--link to font google-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!--link to fontawesome-->
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+                <nav>
+                    <a href="/">
+                        <div class="logo"><i class="fa-solid fa-car-rear"></i><span>My LLN</span></div>
+                    </a>
+
+                    <form action="/search"></form>
+                    <div class="search">
+                        <span class="search-icon material-symbols-outlined">search</span>
+                        <input class= "search-input" type="search" name="query" placeholder="Search">
+                    </div>
+
+                    </form>
+                </nav>
+
+        </div>
+    </header>
+    <div class="center">
+    <div class="container">
+        <div class="firstpart">
+            <form id='userForm' action="/add" method="POST" onsubmit="return validateForm()">
+                <h2>Signaler un nouveau incident</h2>
+                <p>
+                    <label>Description:</label>
+                    <input id='description' name="description" ></input>
+                </p>
+                <p>
+                    <label>Adresse:</label>
+                    <input id='adresse' name="adresse" ></input>
+                </p>
+                <button type="submit">Soumettre</button>
+            </form>
+            <script>
+                function validateForm() {
+                    var adresse = document.getElementById("adresse").value;
+                    var description = document.getElementById("description").value;
+                    if (adresse === "" || description === "") {
+                        alert("Please fill out all fields.");
+                        return false;
+                    }
+                    return true;
+                }
+            </script>
+
+</div>
+</div>
+</body>
+</html>
